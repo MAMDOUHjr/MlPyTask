@@ -1,6 +1,6 @@
 import numpy as np
 
-def dominant_value(matrix):
+def DominantValue(matrix):
     eigenvalues, _ = np.linalg.eig(matrix)
     dominant_eigenvalue = max(eigenvalues, key=abs)
     return dominant_eigenvalue
@@ -20,6 +20,6 @@ def IdentityMatrix(matrix):
 
 
 matrix = np.array([[1, 2], [3, 4]])
-print("Dominant value: {:.2f}".format(dominant_value(matrix)))
+print("Dominant value: {:.2f}".format(DominantValue(matrix)))
 print("Inverse matrix: \n", inverseMatrix(matrix))
 print("Identity matrix: \n", IdentityMatrix(matrix))
